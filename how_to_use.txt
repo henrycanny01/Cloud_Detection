@@ -1,0 +1,27 @@
+download your VSCODE
+
+install python and jupyter notebook extension into your VSCODE
+
+install all packages using:
+pip install -r requirements.txt
+
+run each cell of the Threat_detection_in_cloud_system(1).ipynb
+you should see a next_best_model.pkl file
+
+to get the name of your interface
+run scutil (for macOS)
+run Get-NetAdapter (for windows)
+copy the name of the interface you want to sniff
+
+run the sniff_packets.py file using this command
+python sniff_packets.py --iface {NAME OF YOUR INTERFACE} --count {NUMBER OF PACKET TO SNIFF}
+Example: python sniff_packets.py --iface WiFi --count 1000
+your should get a packets.csv file
+
+
+to run your app on the command line type
+streamlit run main.py
+
+
+Go to the app then upload your packets.csv
+you will get the result and the visualization of your interface packets whether malicious or benign
